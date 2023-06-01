@@ -1,0 +1,64 @@
+<html>
+  <div id="vh" style="height:100vh">
+    <ul class="scrollable" style="font-size: xxx-large">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <script>
+    window.onresize = displaySize;
+    const listItems = document.querySelectorAll( "li" );
+    const div = document.getElementById( "vh" );
+    displaySize();
+    
+    function displaySize() {
+      listItems.forEach( mapToSize );
+    }
+    
+    function mapToSize( element, _index, _array ) {
+      const height = Math.trunc( div.getBoundingClientRect().height );
+      element.innerText = "Viewport height is " + height + " pixels";
+    }
+  </script>
+</html>
